@@ -11,7 +11,7 @@ docker build -t IMAGENAME .
 To run:
 
 ```bash
-docker run -v ./config:/config -e UPSTREAM_CONFIG_FILE=kite-settings.json -p 8888:8888 IMAGENAME
+docker run -v ./myconfigfolder:/config -e UPSTREAM_CONFIG_FILE=kite-settings.json -p 8888:8888 IMAGENAME
 ```
 
 Map a folder containing your config file(s) using `-v`.
