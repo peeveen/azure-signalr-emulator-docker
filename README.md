@@ -1,0 +1,19 @@
+# Azure SignalR emulator Docker image
+
+To build:
+
+```bash
+docker build -t IMAGENAME .
+```
+
+To run:
+
+```bash
+docker run -v ./config:/config -e UPSTREAM_CONFIG_FILE=kite-settings.json -p 8888:8888 IMAGENAME
+```
+
+Map a folder containing your config file(s) using `-v`.
+
+`UPSTREAM_CONFIG_FILE` is the name of the config file within the mapped folder that the emulator should use. Default is `settings.json`.
+
+Emulator is listening on port 8888 internally. You can map it to any external port you wish using `-p`.
