@@ -1,5 +1,7 @@
 # Azure SignalR emulator Docker image
 
+Available from [Docker Hub](https://hub.docker.com) as `peeveen/azure-signal-emulator`.
+
 To build:
 
 ```bash
