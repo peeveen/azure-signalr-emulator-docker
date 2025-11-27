@@ -5,4 +5,4 @@ RUN mkdir /config
 WORKDIR /config
 RUN dotnet tool run asrs-emulator upstream init
 WORKDIR /
-ENTRYPOINT ["/bin/bash", "-c","dotnet tool run asrs-emulator start --config /config/${UPSTREAM_CONFIG_FILE}"]
+ENTRYPOINT ["/bin/bash", "-c","dotnet tool run asrs-emulator start --ip 0.0.0.0 --port 8888 --config /config/${UPSTREAM_CONFIG_FILE}"]
